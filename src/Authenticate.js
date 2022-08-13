@@ -12,7 +12,7 @@ import {
   GithubAuthProvider,  // for github authentication
 } from "firebase/auth";
 
-function App() {
+function Authenticate() {
 
   const [data, setdata] = useState({
 
@@ -116,7 +116,7 @@ function App() {
   );
 }
 
-export default App;
+export default Authenticate;
 
 // FIREBASE ::::
 

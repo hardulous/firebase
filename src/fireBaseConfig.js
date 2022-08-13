@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";  // to run firebase properly
 import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "firebase/firestore"; // to have access to firestore databse
+import { getStorage } from "firebase/storage"
 
 // here this below is the config data 
 
@@ -17,7 +18,10 @@ const firebaseConfig = {
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig); // here use this app in your root component tree
 
-// get the instance of database
-const db = getFirestore(app);
+// get the instance of database which is required for operation with database
+export const db = getFirestore(app);
+
+// here get the instance of firebase storage to save files in that storage
+export const storage = getStorage(app);
 
 const analytics = getAnalytics(app);
